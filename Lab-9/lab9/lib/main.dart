@@ -40,7 +40,6 @@ class _QuotesMainState extends State<QuotesMain> {
   }
 }
 
-
 class QuotesList extends StatefulWidget {
   const QuotesList({Key? key}) : super(key: key);
 
@@ -49,11 +48,10 @@ class QuotesList extends StatefulWidget {
 }
 
 class _QuotesListState extends State<QuotesList> {
-
   List<Quote> quotes = [
     Quote(author: "Ayush Rudani", text: "Eat. Sleep. Code. Repeat."),
-    Quote(author: "Darshit Rudani", text: "Justice shall be served, thy the heavens should fall."),
-    Quote(author: "Alex", text: "It is when you lose everything that you are free to do anything."),
+    Quote(author: "Darshit Rudani", text: "If the code works, Do not touch it"),
+    Quote(author: "Alex", text: "Real programmers count from 0"),
   ];
 
   @override
@@ -65,14 +63,15 @@ class _QuotesListState extends State<QuotesList> {
         children: [
           Expanded(
             child: Column(
-              children: quotes.map((quote) => quoteTemplate(
-                quote: quote,
-                delete: () {
-                  setState(() {
-                    quotes.remove(quote);
-                  });
-                }
-              )).toList(),
+              children: quotes
+                  .map((quote) => quoteTemplate(
+                      quote: quote,
+                      delete: () {
+                        setState(() {
+                          quotes.remove(quote);
+                        });
+                      }))
+                  .toList(),
             ),
           ),
         ],
@@ -80,4 +79,3 @@ class _QuotesListState extends State<QuotesList> {
     );
   }
 }
-

@@ -14,7 +14,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
       appBar: AppBar(
         title: Text("CHOOSE LOCATION"),
         centerTitle: true,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Color.fromARGB(255, 82, 146, 255),
       ),
       body: SafeArea(child: Text("CHOOSE LOCATION SCREEN")),
     );
