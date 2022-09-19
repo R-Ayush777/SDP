@@ -1,5 +1,5 @@
 class Quote {
-  Quote({this.text = '', this.author = ''});
   String text;
   String author;
+  Quote({this.text = '', this.author = ''});
 }

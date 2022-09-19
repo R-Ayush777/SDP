@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: HomeScreen(),
   ));
@@ -18,12 +18,73 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Color(0xFFA9A9A9),
       ),
-      body: Center(
-        // child: Image(
-        //   image: AssetImage("images/snapshot.png"),
-        // ),
-        child: Icon(Icons.code, size: 200),
-        //     child: ElevatedButton(
+      body: const Center(
+          child: Image(
+        image: AssetImage('assets/ra.jpg'),
+      )
+
+          // child: ElevatedButton(
+          //   child: const Text("Elevated Button"),
+          //   onPressed: () {},
+          //   style: ElevatedButton.styleFrom(
+          //       primary: const Color(0xff22223b),
+          //       padding: const EdgeInsets.all(10),
+          //       textStyle: const TextStyle(
+          //           fontFamily: "Monaco",
+          //           fontSize: 20,
+          //           fontWeight: FontWeight.bold)),
+          // ),
+
+          // ),
+          //   child: IconButton(
+          //     icon: Icon(
+          //         Icons.mail_outline_rounded,
+          //         size: 30.0,
+          //     ),
+          //     onPressed: () {},
+          //     tooltip: "Send an E-mail",
+          //   ),
+          //   child: Directionality(
+          //     textDirection: TextDirection.rtl,
+          //     child: TextButton.icon(
+          //       onPressed: () {},
+          //       style: ButtonStyle(
+          //         backgroundColor: MaterialStateProperty.all(Colors.redAccent),
+          //       ),
+          //       icon: Icon(
+          //         Icons.notifications_active,
+          //         color: Colors.white,
+          //         size: 24.0,
+          //       ),
+          //       label: Text(
+          //         "Subscribe",
+          //         style: TextStyle(
+          //           fontSize: 18.0,
+          //           color: Colors.white,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // child: FlatButton(
+          //   onPressed: () {},
+          //   child: Text("Click Me"),
+          //   color: Color(0xFFA9A9A9),
+          // ),
+          ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xFFA9A9A9),
+        child: const Text("Click"),
+      ),
+    );
+  }
+}
+
+
+/*
+
+
+   //     child: ElevatedButton(
         //       child: Text('Shrey Naik'),
         //       onPressed: () {},
         //       style: ElevatedButton.styleFrom(
@@ -71,12 +132,5 @@ class HomeScreen extends StatelessWidget {
         //   child: Text("Click Me"),
         //   color: Color(0xFFA9A9A9),
         // ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Color(0xFFA9A9A9),
-        child: Text("Click"),
-      ),
-    );
-  }
-}
+
+*/
