@@ -38,7 +38,7 @@ class QuoteCard extends StatelessWidget {
               icon: Icon(Icons.delete),
               label: Text('Delete Quote'),
               style: TextButton.styleFrom(
-                primary: Colors.white,
+                primary: Color.fromARGB(255, 255, 255, 255),
                 backgroundColor: Color(0xFF00A2FF), // Background Color
               ),
             ),

@@ -37,8 +37,7 @@ class _SixthClassState extends State<SixthClass> {
         elevation: 0.0,
       ),
       body: Column(
-        //children: quts.map((quote) => Text(quote)).toList(),
-        //children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+        
         children: quotes
             .map((quote) => QuoteCard(
                 quote: quote,
