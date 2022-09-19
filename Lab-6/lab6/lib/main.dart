@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  /**
-  * //Default Code
-  runApp(const MyApp()); */
-
   // Test 1
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('First App'),
+        title: Text('Lab 6'),
         // For using hex color in flutter add 0xff before
-        backgroundColor: Color(0xffB1B2FF),
+        backgroundColor: Color.fromARGB(255, 148, 148, 148),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          'Hello Everyone',
+          'Hello There 👋',
           style: TextStyle(
             fontSize: 24.0,
-            fontFamily: 'Cedarville Cursive',
+            fontFamily: 'Poppins-Black',
             fontWeight: FontWeight.bold,
             letterSpacing: 2.0,
             color: Colors.grey[600],
@@ -29,7 +25,7 @@ void main() {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('Click'),
-        backgroundColor: Color(0xffB1B2FF),
+        backgroundColor: Color.fromARGB(255, 148, 148, 148),
       ),
     ),
   ));
