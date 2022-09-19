@@ -1,7 +1,6 @@
-import "package:flutter/material.dart";
-import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:lab10/world_time.dart';
+import 'dart:convert';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -11,34 +10,32 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  String? time = 'LOADING..........';
+  void getData() async {
+    final response =
+        await get(Uri.parse('https://jsonplaceholder.typicode.com/albums/50'));
+    print(response.body);
 
-  void setWorldTime() async {
-    WorldTime timeinstance =
-        WorldTime(location: 'kolkata', flag: 'india.png', url: 'Asia/Kolkata');
-    await timeinstance.getTime();
-    setState(() {
-      time = timeinstance.time;
-    });
+    Map data = jsonDecode(response.body);
+    print(data);
+    print(data['title']);
   }
 
+  @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    // getData();
-    setWorldTime();
+    getData();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFFF5E4),
       appBar: AppBar(
-        title: Text("Loading Screen"),
+        title: Text(' Loading Screen'),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 82, 171, 255),
-      ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Text(time.toString()),
+        backgroundColor: Color.fromARGB(255, 1, 162, 255),
+        elevation: 0.0,
       ),
     );
   }
